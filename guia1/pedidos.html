@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos | Panadería Santa Rosa</title>
+</head>
+<body style="background-color: #F4F5F7; font-family: 'Helvetica Neue', Arial, sans-serif; color: #1B263B; margin: 0; padding: 0;">
+
+  <!-- Encabezado con menú completo -->
+  <header style="background-color: #1B263B; color: #FFFFFF; padding: 35px 20px; text-align: center; border-bottom: 5px solid #C68B59;">
+    <h1 style="margin: 0; font-size: 2.3rem;">Panadería Santa Rosa</h1>
+    <nav style="margin-top: 15px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+      <a href="index.html" style="background: #415A77; color: #FFFFFF; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">Inicio</a>
+      <a href="index.html#productos" style="background: #415A77; color: #FFFFFF; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">Productos</a>
+      <a href="pedidos.html" style="background: #C68B59; color: #FFFFFF; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">Realizar pedido</a>
+      <a href="index.html#visitanos" style="background: #415A77; color: #FFFFFF; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">Contacto</a>
+      <a href="../index.html" style="background: #2D3748; color: #E2E8F0; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">Menú Principal</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 650px; margin: 35px auto; background: #FFFFFF; padding: 45px; border-radius: 16px; box-shadow: 0 12px 35px rgba(27,38,59,0.07);">
+    <h2 style="color: #1B263B; text-align: center; margin-top: 0; font-size: 1.8rem;">Formulario de pedidos</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Completa tus datos para registrar tu pedido.</p>
+
+    <form action="#">
+      <div style="margin-bottom: 20px;">
+        <label for="nombre" style="font-weight: bold; display: block; margin-bottom: 8px; color: #1B263B;">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" style="width: 100%; padding: 12px; border: 1.5px solid #D1C7BD; border-radius: 8px; font-size: 1rem; box-sizing: border-box;" required>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label for="celular" style="font-weight: bold; display: block; margin-bottom: 8px; color: #1B263B;">Número de celular:</label>
+        <input type="tel" id="celular" name="celular" style="width: 100%; padding: 12px; border: 1.5px solid #D1C7BD; border-radius: 8px; font-size: 1rem; box-sizing: border-box;" required>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label for="producto" style="font-weight: bold; display: block; margin-bottom: 8px; color: #1B263B;">Selecciona un producto:</label>
+        <select id="producto" name="producto" style="width: 100%; padding: 12px; border: 1.5px solid #D1C7BD; border-radius: 8px; font-size: 1rem; background: white; box-sizing: border-box;" required>
+          <option value="">Seleccionar producto</option>
+          <option>Pan francés (S/ 0.30)</option>
+          <option>Pan de yema (S/ 0.50)</option>
+          <option>Chancay (S/ 0.60)</option>
+          <option>Torta de chocolate (S/ 45.00)</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <label for="cantidad" style="font-weight: bold; display: block; margin-bottom: 8px; color: #1B263B;">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1" style="width: 100%; padding: 12px; border: 1.5px solid #D1C7BD; border-radius: 8px; font-size: 1rem; box-sizing: border-box;" required>
+      </div>
+
+      <button type="submit" style="background: #1B263B; color: #FFFFFF; border: none; padding: 14px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(27,38,59,0.25);">Enviar pedido</button>
+    </form>
+    
+    <div style="text-align: center; margin-top: 25px;">
+      <a href="../index.html" style="color: #C68B59; font-weight: bold; text-decoration: underline;">Volver al Menú Principal</a>
+    </div>
+  </main>
+</body>
+</html>

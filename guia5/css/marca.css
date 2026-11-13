@@ -1,0 +1,40 @@
+:root {
+  --cafe: #1B263B;
+  --amarillo: #C68B59;
+}
+
+.precio {
+  display: inline-block;
+  background: #E0A96D;
+  color: #1B263B;
+  font-weight: bold;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+#lista-pedido li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #E3DECF;
+}
+
+.btn-quitar {
+  border: 2px solid #1B263B;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: #1B263B;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+}
+
+.btn-cant {
+  border: 1px solid #1B263B;
+  background: #FFFFFF;
+  color: #1B263B;
+  font-weight: bold;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panadería Santa Rosa | Catálogo y Pedidos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="pedido.js" defer></script>
+</head>
+<body>
+
+  <!-- Encabezado institucional -->
+  <header>
+    <div class="header-container">
+      <h1>Panadería Santa Rosa</h1>
+      <p>Tradición, sabor y abarrotes frescos para compartir en familia.</p>
+      
+      <!-- Buscador en tiempo real -->
+      <div class="buscador-container">
+        <input type="text" id="input-buscar" placeholder="🔍 ¿Qué deseas buscar hoy? (pan, leche, mermelada...)">
+      </div>
+
+      <nav>
+        <a href="index.html" class="active">Catálogo</a>
+        <a href="#canasta">Ver Carrito</a>
+        <a href="../index.html" class="btn-regresar">Menú Principal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Bienvenida oficial -->
+    <section class="bienvenida">
+      <h2>Bienvenidos</h2>
+      <p>Somos una panadería que ofrece panes frescos y productos preparados para compartir en familia.</p>
+    </section>
+
+    <!-- Catálogo -->
+    <section class="catalogo-grid" id="grid-productos">
+      
+      <!-- Pan de yema -->
+      <div class="producto" data-nombre="pan de yema" data-precio="0.50" data-id="pan-yema">
+        <div class="img-container">
+          <img src="../img/pandeyema.jpg" alt="Pan de yema">
+          <span class="badge">Favorito</span>
+        </div>
+        <div class="info-producto">
+          <h3>Pan de yema</h3>
+          <p class="descripcion">Suave y tradicional, horneado del día.</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 0.50 <small>u.</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pan francés -->
+      <div class="producto" data-nombre="pan francés" data-precio="0.30" data-id="pan-frances">
+        <div class="img-container">
+          <img src="../img/panfrances.jpg" alt="Pan francés">
+          <span class="badge fresco">Crocante</span>
+        </div>
+        <div class="info-producto">
+          <h3>Pan francés</h3>
+          <p class="descripcion">Crujiente por fuera y suave por dentro.</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 0.30 <small>u.</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pan Chancay -->
+      <div class="producto" data-nombre="chancay pan chancay" data-precio="0.60" data-id="pan-chancay">
+        <div class="img-container">
+          <img src="../img/panchancay.jpg" alt="Pan Chancay">
+          <span class="badge dulce">Dulce</span>
+        </div>
+        <div class="info-producto">
+          <h3>Pan Chancay</h3>
+          <p class="descripcion">Bizcocho dulce tradicional esponjoso.</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 0.60 <small>u.</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Torta de chocolate -->
+      <div class="producto" data-nombre="torta de chocolate" data-precio="45.00" data-id="torta-chocolate">
+        <div class="img-container">
+          <img src="../img/tortadechocolate.jpg" alt="Torta de chocolate">
+          <span class="badge especial">Especial</span>
+        </div>
+        <div class="info-producto">
+          <h3>Torta de chocolate</h3>
+          <p class="descripcion">Húmeda con fudge artesanal (entera).</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 45.00 <small>c/u</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leche Fresca -->
+      <div class="producto" data-nombre="leche evaporada" data-precio="4.80" data-id="leche">
+        <div class="img-container">
+          <img src="../img/leche-vaca.jpg" alt="Leche evaporada">
+          <span class="badge">Abarrote</span>
+        </div>
+        <div class="info-producto">
+          <h3>Leche Evaporada</h3>
+          <p class="descripcion">Ideal para acompañar tus desayunos y cafés.</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 4.80 <small>latas</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Azúcar Rubia -->
+      <div class="producto" data-nombre="azucar rubia" data-precio="4.50" data-id="azucar">
+        <div class="img-container">
+          <img src="../img/azucarrubia.jpg" alt="Azúcar rubia">
+          <span class="badge">Abarrote</span>
+        </div>
+        <div class="info-producto">
+          <h3>Azúcar Rubia (1kg)</h3>
+          <p class="descripcion">Azúcar seleccionada para repostería y bebidas.</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 4.50 <small>kg</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mermelada de Fresa -->
+      <div class="producto" data-nombre="mermelada de fresa" data-precio="6.50" data-id="mermelada">
+        <div class="img-container">
+          <img src="../img/mermelada.jpg" alt="Mermelada de fresa">
+          <span class="badge dulce">Complemento</span>
+        </div>
+        <div class="info-producto">
+          <h3>Mermelada de Fresa</h3>
+          <p class="descripcion">Frasco de 300g ideal para tus panes de yema.</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 6.50 <small>frasco</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Café Pasado -->
+      <div class="producto" data-nombre="cafe pasado" data-precio="8.00" data-id="cafe">
+        <div class="img-container">
+          <img src="../img/cafe.jpg" alt="Café pasado">
+          <span class="badge fresco">Bebida</span>
+        </div>
+        <div class="info-producto">
+          <h3>Café Pasado Tradicional</h3>
+          <p class="descripcion">Café pasado listo para tomar o calentar.</p>
+          <div class="precio-accion">
+            <span class="precio">S/ 8.00 <small>termo</small></span>
+            <button class="btn-anadir">Añadir</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Sección Carrito y Datos de Envío / Pago -->
+    <section id="canasta" class="canasta-seccion">
+      <div class="canasta-header">
+        <h3>Tu Carrito de Compras</h3>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span id="contador-items" class="badge-contador">0 productos</span>
+          <button id="btn-vaciar" class="btn-vaciar">Vaciar carrito</button>
+        </div>
+      </div>
+      
+      <div class="canasta-body">
+        <ul id="lista-pedido">
+          <li class="carrito-vacio">Tu carrito está vacío. ¡Agrega productos del catálogo!</li>
+        </ul>
+      </div>
+
+      <!-- Formulario de Envío y Pago -->
+      <div class="formulario-envio">
+        <h4>Datos de Envío y Forma de Pago</h4>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nombre-cliente">Nombre y Apellido:</label>
+            <input type="text" id="nombre-cliente" placeholder="Ej. Juan Pérez">
+          </div>
+          <div class="form-group">
+            <label for="telefono-cliente">Celular de contacto (Solo números):</label>
+            <input type="tel" id="telefono-cliente" placeholder="Ej. 987654321" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="9">
+          </div>
+          <div class="form-group full">
+            <label for="direccion-cliente">Dirección de entrega (o indicar Recojo en Tienda):</label>
+            <input type="text" id="direccion-cliente" placeholder="Av. Los Panaderos 123, Surquillo">
+          </div>
+
+          <!-- Selector de Forma de Pago -->
+          <div class="form-group full">
+            <label for="forma-pago">Selecciona la Forma de Pago:</label>
+            <select id="forma-pago" style="width: 100%; padding: 9px; border: 1.5px solid #D1C7BD; border-radius: 6px; font-size: 0.95rem; background: white;">
+              <option value="Efectivo">Efectivo (Pago al recibir)</option>
+              <option value="Tarjeta">Tarjeta de Crédito / Débito</option>
+              <option value="Yape / Plin">Yape / Plin (Billetera digital)</option>
+            </select>
+          </div>
+
+          <!-- Contenedor dinámico de Tarjeta -->
+          <div id="seccion-tarjeta" class="form-group full" style="display: none; background: #fff; padding: 15px; border-radius: 8px; border: 1px dashed #C68B59; margin-top: 5px;">
+            <h5 style="margin: 0 0 10px 0; color: #1B263B;">💳 Ingrese los datos de su tarjeta:</h5>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <input type="text" id="num-tarjeta" placeholder="Número de tarjeta (16 dígitos)" maxlength="16" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+              <div style="display: flex; gap: 10px;">
+                <input type="text" id="exp-tarjeta" placeholder="MM/AA" maxlength="5" style="flex: 1;">
+                <input type="password" id="cvv-tarjeta" placeholder="CVV" maxlength="4" style="flex: 1;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+              </div>
+            </div>
+          </div>
+
+          <!-- Contenedor dinámico de Yape / Plin -->
+          <div id="seccion-yape" class="form-group full" style="display: none; background: #fdf2e9; padding: 15px; border-radius: 8px; border: 1px dashed #e67e22; margin-top: 5px;">
+            <h5 style="margin: 0 0 8px 0; color: #d35400;">📱 Pago con Yape / Plin:</h5>
+            <p style="margin: 0 0 10px 0; font-size: 0.85rem; color: #555;">Yapea al número <strong>987 654 321</strong> (Panadería Santa Rosa) y coloca tu celular junto al código de aprobación de tu operación:</p>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <input type="tel" id="yape-celular" placeholder="Ingrese tu celular Yape (9 dígitos)" maxlength="9" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+              <input type="text" id="yape-codigo" placeholder="Ingresa el Código de aprobación / Operación (Ej. 123456)" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="canasta-footer">
+        <div class="total-contenedor">
+          <span>Total a pagar:</span>
+          <span id="total">S/ 0.00</span>
+        </div>
+        <button id="btn-procesar" class="btn-checkout">Pagar y Enviar Pedido</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Panadería Santa Rosa | Guía Interactiva</p>
+      <a href="../index.html" class="btn-menu">Regresar al Menú Principal</a>
+    </div>
+  </footer>
+
+</body>
+</html>

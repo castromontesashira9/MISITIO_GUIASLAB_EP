@@ -1,0 +1,15 @@
+Integrantes: Daniel Díaz Montilla (y pareja de reto)
+
+1. Compara tu estilos.css de la Semana 2 con marca.css: ¿cuántas líneas tiene cada uno y qué te ahorró Bootstrap? ¿Qué perdiste?
+- El archivo estilos.css clásico de la Semana 2 contenía una mayor cantidad de líneas dedicadas a definir desde cero los selectores de posicionamiento, flexbox para la grilla, media queries manuales para breakpoints y reglas detalladas para cada tarjeta. En contraste, marca.css tiene muchas menos líneas porque se limita a sobrescribir las variables raíz y a declarar clases utilitarias. Bootstrap nos ahorró escribir código de diseño responsivo y maquetación de componentes base; sin embargo, perdiste control absoluto y granular sobre cada píxel y comportamiento nativo de los elementos antes de aplicar las clases del framework.
+
+2. ¿Qué valor por defecto de Bootstrap tuviste que corregir y cómo comprobaste que tu corrección funcionaba?
+- Tuvimos que corregir los colores y contrastes del menú de navegación para asegurar legibilidad institucional. Comprobamos la corrección utilizando herramientas de verificación de contraste en el navegador.
+
+3. Quita por un momento aria-expanded y aria-label del botón del menú. ¿Qué perdería una persona que usa lector de pantalla?
+- Una persona que utiliza un lector de pantalla perdería la retroalimentación auditiva crucial sobre el estado actual del componente interactivo (si el menú está abierto o cerrado gracias a aria-expanded), además de perder la descripción semántica del propósito del botón con aria-label.
+
+4. Para cada uno de los tres encargos del debate, ¿usarías Bootstrap o CSS propio? Justifica con tiempo, identidad de marca, peso de la página y mantenimiento.
+- Web de la segunda tienda para el lunes (plazo muy corto): Usarías Bootstrap por su rapidez de desarrollo.
+- Pastelería de lujo con diseño único (identidad visual exclusiva y sofisticada): Usarías CSS propio para tener control total del diseño a medida.
+- Sistema interno para los panaderos (herramienta funcional de uso diario): Usarías Bootstrap por eficiencia y usabilidad estandarizada.

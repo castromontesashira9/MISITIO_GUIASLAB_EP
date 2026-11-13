@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panadería Santa Rosa | Catálogo y Pedidos</title>
+  <!-- Bootstrap 5.3.8 CDN con integridad -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+  <!-- Estilos de marca personalizados -->
+  <link rel="stylesheet" href="css/marca.css">
+  <!-- Scripts -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous" defer></script>
+  <script src="js/pedido.js" defer></script>
+  <script src="js/vaciar.js" defer></script>
+</head>
+<body style="background-color: #F4F5F7; font-family: 'Helvetica Neue', Arial, sans-serif; color: #1B263B;">
+
+  <!-- Barra de navegación institucional -->
+  <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: #1B263B;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">← Volver al Menú Principal</a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav align-items-md-center gap-3">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index-bootstrap.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main class="container my-5" style="max-width: 1000px;">
+    
+    <!-- Encabezado institucional -->
+    <section class="p-4 p-md-5 mb-5 rounded-4 shadow-sm text-center bg-white" style="border-left: 8px solid #C68B59;">
+      <h1 class="display-6 fw-bold mb-3" style="color: #1B263B;">Panadería Santa Rosa</h1>
+      <p class="text-secondary mx-auto mb-0" style="max-width: 700px; font-size: 1.05rem;">
+        Panes frescos, bizcochos tradicionales y abarrotes seleccionados horneados y preparados cada día para ti.
+      </p>
+    </section>
+
+    <!-- Catálogo Completo en Grilla Responsiva -->
+    <section id="productos" class="mb-5">
+      <h2 class="text-center fw-bold mb-4" style="color: #1B263B; text-transform: uppercase; letter-spacing: 1px;">Nuestros Productos</h2>
+      
+      <div class="catalogo row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        
+        <!-- Pan de yema -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Pan de yema" data-precio="0.50">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/pandeyema.jpg" alt="Pan de yema" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Pan de yema</h3>
+              <p class="card-text text-muted small mb-2">Suave y tradicional.</p>
+              <p class="precio mt-auto mb-3">S/ 0.50 u.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pan francés -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Pan francés" data-precio="0.30">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/panfrances.jpg" alt="Pan francés" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Pan francés</h3>
+              <p class="card-text text-muted small mb-2">Crujiente por fuera.</p>
+              <p class="precio mt-auto mb-3">S/ 0.30 u.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pan Chancay -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Chancay" data-precio="0.60">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/panchancay.jpg" alt="Pan Chancay" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Chancay</h3>
+              <p class="card-text text-muted small mb-2">Bizcocho dulce.</p>
+              <p class="precio mt-auto mb-3">S/ 0.60 u.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Torta de chocolate -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Torta de chocolate" data-precio="45.00">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/tortadechocolate.jpg" alt="Torta de chocolate" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Torta de chocolate</h3>
+              <p class="card-text text-muted small mb-2">Húmeda con fudge.</p>
+              <p class="precio mt-auto mb-3">S/ 45.00 c/u</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Mermelada -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Mermelada" data-precio="6.50">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/mermelada.jpg" alt="Mermelada" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Mermelada</h3>
+              <p class="card-text text-muted small mb-2">Pote 300g.</p>
+              <p class="precio mt-auto mb-3">S/ 6.50 u.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Leche evaporada -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Leche evaporada" data-precio="4.80">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/leche-vaca.jpg" alt="Leche evaporada" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Leche evaporada</h3>
+              <p class="card-text text-muted small mb-2">Jarrón 400g.</p>
+              <p class="precio mt-auto mb-3">S/ 4.80 u.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Azúcar rubia -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Azúcar rubia" data-precio="4.50">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/azucarrubia.jpg" alt="Azúcar rubia" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Azúcar rubia</h3>
+              <p class="card-text text-muted small mb-2">Bolsa 1 kg.</p>
+              <p class="precio mt-auto mb-3">S/ 4.50 kg</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Café pasado -->
+        <div class="col">
+          <article class="producto card h-100 shadow-sm border-0" data-nombre="Café pasado" data-precio="12.00">
+            <div class="bg-white p-3 rounded-top d-flex align-items-center justify-content-center" style="height: 150px;">
+              <img src="../img/cafe.jpg" alt="Café pasado" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column text-center">
+              <h3 class="card-title h6 fw-bold" style="color: #1B263B;">Café pasado</h3>
+              <p class="card-text text-muted small mb-2">Frasco 250g.</p>
+              <p class="precio mt-auto mb-3">S/ 8.00 u.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <button type="button" class="btn w-100 btn-anadir fw-bold text-white" style="background-color: #C68B59;">Añadir</button>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección «Mi pedido» (Carrito) -->
+    <section id="mi-pedido" class="card p-4 shadow-sm border-0 rounded-4 bg-white" aria-labelledby="titulo-pedido">
+      <h2 id="titulo-pedido" class="h5 fw-bold mb-3" style="color: #1B263B;" tabindex="-1">Mi pedido</h2>
+      <p id="pedido-vacio" class="text-muted">Tu pedido está vacío. Añade productos del catálogo.</p>
+      <ul id="lista-pedido" class="list-unstyled mb-3"></ul>
+      <p class="fs-5 fw-bold">Total: <strong id="total" class="text-danger">S/ 0.00</strong></p>
+      <div class="d-flex flex-wrap gap-2 mt-3">
+        <a href="pedidos.html" class="btn text-white fw-bold px-4" style="background-color: #1B263B;">Continuar con el pedido</a>
+        <button type="button" class="btn btn-outline-danger px-4 fw-bold"
+                data-bs-toggle="modal" data-bs-target="#modalVaciar">Vaciar pedido</button>
+      </div>
+      <p id="aviso" class="visually-hidden" role="status"></p>
+    </section>
+
+  </main>
+
+  <!-- Modal de confirmación para vaciar el pedido -->
+  <div class="modal fade" id="modalVaciar" tabindex="-1"
+       aria-labelledby="modalVaciarTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header text-white" style="background-color: #1B263B;">
+          <h2 class="modal-title fs-5 fw-bold" id="modalVaciarTitulo">¿Vaciar tu pedido?</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body py-4">
+          Se quitarán todos los productos de tu lista. Esta acción no se puede deshacer.
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-outline-secondary px-3"
+                  data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger px-3 fw-bold" id="confirmarVaciar"
+                  data-bs-dismiss="modal">Sí, vaciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="text-center py-4 mt-5" style="color: #415A77; font-weight: 600;">
+    <p class="mb-0">Panadería Santa Rosa | Tradición y Calidad</p>
+  </footer>
+
+</body>
+</html>
